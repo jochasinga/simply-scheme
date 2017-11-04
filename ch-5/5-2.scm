@@ -49,3 +49,11 @@
                         (car l)
                         (get-last (cdr l))))))) '())])
     (append fst snd lst)))
+
+;; with extension
+;;(define (f3 l1 l2)
+;;  (sentence l1 l1))
+
+;; without extension
+(define (f3 l1 l2)
+  (append l1 l1))
