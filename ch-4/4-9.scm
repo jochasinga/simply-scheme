@@ -1,22 +1,12 @@
-;; (A harder problem for hotshots: Can you write procedures that go in the other direction? So you'd have
+;; Define a procedure discount that takes two arguments: an item's initial price
+;; and a percentage discount. It should return the new price:
 ;;
-;; > (sci-coefficient 7000)
-;; 7
+;; > (discount 10 5)
+;; 9.50
 ;;
-;; > (sci-exponent 7000)
-;; 3
+;; > (discount 29.90 50)
+;; 14.95
 
-(define (sci-coefficient n)
-  (if (zero? (modulo n 10))
-      (sci-coefficient (* n 0.1))
-      (if (< n 10)
-	  n
-	  (/ n 10))))
-
-(define (sci-exponent n)
-  (let aux ([a 0] [b n])
-    (if (zero? (modulo b 10))
-	(aux (+ a 1) (* b 0.1))
-	(if (< b 10)
-	    a
-	    (+ a 1)))))
+(define (discount total percent)
+  (let ([discount-amount (* total percent)])
+    (- total discount-amount)))
