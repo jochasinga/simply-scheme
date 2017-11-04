@@ -57,3 +57,15 @@
 ;; without extension
 (define (f3 l1 l2)
   (append l1 l1))
+
+;; with extension
+;;(define (f4 l1 l2)
+;;  (word (car (cdr l1)) (car (cdr l2))))
+
+;; without extension
+;; there's probably a better way 
+(define (f4 l1 l2)
+  (string->symbol
+   (string-append
+    (symbol->string (car (cdr l1)))
+    (symbol->string (car (cdr l2))))))
