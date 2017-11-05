@@ -46,6 +46,31 @@ except the first `'abadak` (all *but* the *first*).
 
 All but the last one.
 
+### 5.9
+
+> Figure out what values each of the following will return *before* you try them on the computer:
+
+```scheme
+
+(se (word (bl (bl (first '(make a))))
+	      (bf (bf (last '(baseball mitt)))))
+    (word (first 'with) (bl (bl (bl (bl 'rigidly))))
+	      (first 'held) (first (bf 'stitches))))
+		  
+(se (word (bl (bl 'bring)) 'a (last 'clean))
+    (word (bl (last '(baseball hat))) (last 'for) (bl (bl 'very))
+	  (last (first '(sunny days)))))
+		  
+```
+
+`'(matt wright)` and `'(brian harvey)`, respectively.
+
+
+
+
+
+
+
 
 
 
